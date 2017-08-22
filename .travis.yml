@@ -1,0 +1,12 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+script:
+  - docker-compose build .
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push portenez/node8-base;
+    fi
