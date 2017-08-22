@@ -4,7 +4,8 @@ language: generic
 services:
   - docker
 script:
-  - docker build .
+  - docker build --tag portenez/node8-base .
+
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
