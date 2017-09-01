@@ -4,4 +4,4 @@ RUN npm install -g nodemon
 RUN npm install -g yarn
 RUN apk update && apk upgrade && \
     apk add --no-cache git openssh
-RUN npm install runjs@3.4.1
+RUN npm -g install runjs@3.4.1
