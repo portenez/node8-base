@@ -4,10 +4,10 @@ language: generic
 services:
   - docker
 script:
-  - docker build --tag portenez/node8-base .
+  - docker build --tag portenez/node8-base:node8.5-alpine .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push portenez/node8-base;
+    docker push portenez/node8-base:node8.5-alpine;
     fi
