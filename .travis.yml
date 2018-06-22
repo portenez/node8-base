@@ -4,7 +4,7 @@ language: generic
 services:
   - docker
 script:
-  - docker build --tag portenez/node8-ase:node8.11-alpine .
+  - docker build --tag portenez/node8-base:node8.11-alpine .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
