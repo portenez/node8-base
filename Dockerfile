@@ -1,4 +1,4 @@
-FROM node:8.5-alpine
+FROM node:8.10-alpine
 
 RUN npm install -g nodemon
 RUN npm install -g yarn
